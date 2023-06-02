@@ -42,6 +42,8 @@ const addToCarrito = () => {
         // Hago una peticion de tipo GET al endpoint products/id  pata obtener el producto
         const prod = await fetch(`${URL_API}/${id}`);
         const prodJson = await prod.json();
+        prodJson["quantity"] = 1;
+        prodJson["total"] = Number(prodJson.price);
         let carrito = localStorage.getItem("carrito");
         if (carrito) {
           carrito = JSON.parse(carrito);

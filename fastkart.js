@@ -132,49 +132,55 @@ fetch(URL_API)
 
 // hover carrito
 
-const carritoSymbol = document.getElementById("hover-carrito");
+// Obtener el elemento del carrito de compras
+let cartIcon = document.getElementById('cart-icon');
+console.log(cartIcon);
 
-function mostrarProductosCarrito() {
-  console.log("hola");
-  // Obtener los datos de los productos del localStorage
-  const productos = JSON.parse(localStorage.getItem("carrito")) || [];
+// Obtener el elemento emergente del carrito de compras
+let cartPopup = document.getElementById('cart-popup');
 
-  // Crear un elemento de lista para cada producto
-  const listaProductos = document.createElement("ul");
-  listaProductos.style.listStyle = "none";
-  productos.forEach((producto) => {
-    const itemProducto = document.createElement("li");
+// Función para mostrar los elementos del carrito
+function showCartItems() {
+  // Obtener los elementos del carrito desde el localStorage
+  let cartItems = JSON.parse(localStorage.getItem('carrito'));
+  // Obtener el elemento de la lista de productos
+  let cartItemList = document.getElementById('cart-items');
 
-    const imagenProducto = document.createElement("img");
-    imagenProducto.style.width = "50px";
-    imagenProducto.style.height = "auto";
-    imagenProducto.style.paddingRight = "10px";
-    imagenProducto.src = producto.image;
-    itemProducto.appendChild(imagenProducto);
+  // Limpiar la lista de productos
+  cartItemList.innerHTML = '';
 
-    const nombreProducto = document.createElement("span");
-    nombreProducto.style.paddingRight = "10px";
-    nombreProducto.style.color ="rgb(73, 179, 156)";
-    nombreProducto.textContent = producto.name;
-    itemProducto.appendChild(nombreProducto);
+  console.log(cartItems.length);
+  if (cartItems.length > 0){
+      // Mostrar cada producto en la lista
+  cartItems.forEach(function(item) {
 
-    const precioProducto = document.createElement("span");
-    precioProducto.textContent = `$ ${producto.price}`;
-    itemProducto.appendChild(precioProducto);
+    cartItemList.innerHTML += `
+    <article class= "article-hover">
+      <figure class="figure-hover">
+    <img class = "imagen-hover" src=${item.image} alt=${item.name}${item.category}>
+    </figure>
+      <div class="div-hover">
+      <h3 class="nombre-hover">${item.name} </h3>
+      <span class="precio-hover">${item.quantity} x $${Number(item.price).toLocaleString()}</span>
+      </div>
+    </article>
+      `
+    });
 
-    listaProductos.appendChild(itemProducto);
-  });
+    // Mostrar el carrito emergente
+    cartPopup.style.display = 'block';
+  }
 
-  swal({
-    title: "Productos en el carrito",
-    content: listaProductos,
-    buttons: {
-      confirm: {
-        text: "OK",
-        className: "swal-carrito",
-      }
-    }
-  });
-}
+};
 
-carritoSymbol.addEventListener("mouseenter", mostrarProductosCarrito);
+// Función para ocultar los elementos del carrito
+function hideCartItems() {
+  // Ocultar el carrito emergente
+  cartPopup.style.display = 'none';
+};
+
+// Escuchar el evento 'mouseenter' en el carrito de compras
+cartIcon.addEventListener('mouseenter', showCartItems);
+
+// Escuchar el evento 'mouseleave' en el carrito de compras
+cartIcon.addEventListener('mouseleave', hideCartItems);
