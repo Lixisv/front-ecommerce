@@ -1,0 +1,316 @@
+:root {
+    --color-primary: rgb(73, 179, 156);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Aqui empieza el header  */
+
+/* Primer div header  */
+
+.header-info {
+    background-color: var(--color-primary);
+    color: aliceblue;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    padding: 18px 65px;
+}
+
+.header-info a {
+    color: aliceblue;
+
+}
+
+.images-header-info {
+    width: 20px;
+}
+
+.header-info div {
+    display: flex;
+    gap: 10px;
+}
+
+/* Segundo div header  */
+
+.header-busqueda {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 65px;
+}
+
+.header-busqueda div {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+
+.imagen-logo-header {
+    width: 12em;
+}
+
+
+.input-busqueda {
+    width: 50em;
+    height: 4em;
+    border: 1px solid rgb(209, 205, 205);
+    border-radius: 5px;
+    outline: none;
+    padding: 0px 15px;
+}
+
+.imagen-lupa {
+    background-color: rgba(255, 166, 0, 0.873);
+    width: 3.2em;
+    padding: 10px 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.imagen-busqueda {
+    background-color: rgb(223, 223, 223);
+    width: 3.2em;
+    padding: 8px 8px;
+    border-radius: 5px;
+}
+
+
+.imagenes-busqueda-div3 {
+    width: 25px;
+}
+
+
+
+
+.separador {
+    color: rgb(143, 143, 143);
+    font-size: 25px;
+}
+
+
+/* tercer div header  */
+
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 65px;
+}
+
+
+.all-categories {
+    width: 200px;
+    display: flex;
+    background-color: var(--color-primary);
+    font-weight: bold;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.icon-hamburguer {
+    width: 20px;
+}
+
+.nav-header-div3 {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 15px;
+}
+
+.li-header {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.flecha-abajo-negra {
+    width: 20px;
+}
+
+.rayo {
+    width: 75%;
+    cursor: pointer;
+}
+
+
+
+
+/* Aqui empieza el carrito  */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 18px 65px;
+}
+
+.div-titulo-carrito {
+    background-color: rgba(128, 128, 128, 0.077);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0px 65px;
+
+}
+
+.div-titulo-carrito h2 {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-total {
+    background-color: rgba(128, 128, 128, 0.077);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 65px;
+    gap: 20px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+}
+
+.total-numeros {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.boton-process {
+    background-color: rgba(255, 0, 0, 0.585);
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boton-return {
+    background-color: rgba(128, 128, 128, 0.278);
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.a-carrito-process {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.a-carrito-return {
+    color: gray;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+
+
+/* Aqui empiezan las cards */
+
+#contenedorCards {
+    display: flex;
+}
+
+
+.card {
+    display: flex;
+    border: 1px solid rgba(128, 128, 128, 0.566);
+    border-radius: 8px;
+    align-items: center;
+    padding: 10px 60px;
+    justify-content: space-between;
+}
+
+
+.card-figure img{
+    display: flex;
+    width: 150px;
+}
+
+.card-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2%;
+    object-fit: contain;
+}
+
+.span-price {
+    color: var(--color-primary);
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.span-category {
+    color: gray;
+}
+
+.div-name-price {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quantity {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.btn-quantity {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.292);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    width: 70px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgba(255, 0, 0, 0.611);;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration:underline;
+    background-color: white;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

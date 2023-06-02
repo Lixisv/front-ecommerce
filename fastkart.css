@@ -1,0 +1,607 @@
+:root {
+    --color-primary: rgb(73, 179, 156);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Aqui empieza el header  */
+
+/* Primer div header  */
+
+.header-info {
+    background-color: var(--color-primary);
+    color: aliceblue;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    padding: 18px 65px;
+}
+
+.header-info a {
+    color: aliceblue;
+
+}
+
+.images-header-info {
+    width: 20px;
+}
+
+.header-info div {
+    display: flex;
+    gap: 10px;
+}
+
+/* Segundo div header  */
+
+.header-busqueda {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 65px;
+}
+
+.header-busqueda div {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+
+.imagen-logo-header {
+    width: 12em;
+}
+
+
+.input-busqueda {
+    width: 50em;
+    height: 4em;
+    border: 1px solid rgb(209, 205, 205);
+    border-radius: 5px;
+    outline: none;
+    padding: 0px 15px;
+}
+
+.imagen-lupa {
+    background-color: rgba(255, 166, 0, 0.873);
+    width: 3.2em;
+    padding: 10px 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.imagen-busqueda {
+    background-color: rgb(223, 223, 223);
+    width: 3.2em;
+    padding: 8px 8px;
+    border-radius: 5px;
+}
+
+
+.imagenes-busqueda-div3 {
+    width: 25px;
+}
+
+
+
+
+.separador {
+    color: rgb(143, 143, 143);
+    font-size: 25px;
+}
+
+
+/* tercer div header  */
+
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 65px;
+}
+
+
+.all-categories {
+    width: 200px;
+    display: flex;
+    background-color: var(--color-primary);
+    font-weight: bold;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.icon-hamburguer {
+    width: 20px;
+}
+
+.nav-header-div3 {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 15px;
+}
+
+.li-header {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.flecha-abajo-negra {
+    width: 20px;
+}
+
+.rayo {
+    width: 75%;
+    cursor: pointer;
+}
+
+
+
+
+/* Aqui empieza el main  */
+
+
+main {
+    padding: 18px 65px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.imagenes-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+
+.imagen-main {
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.imagen-main-div:nth-child(1) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+
+
+
+/* Aqui empieza el FOOTER */
+
+
+footer {
+    background-color: rgba(139, 15, 15, 0);
+}
+
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    gap: 5em;
+    padding: 18px 65px;
+    flex-wrap: wrap;
+}
+
+
+footer div ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer div ul li a {
+    text-decoration: none;
+    color:   rgb(96, 94, 94)
+}
+
+footer div ul li {
+    list-style: none;
+}
+
+.parrafo-footer {
+    color: rgb(96, 94, 94);
+    line-height: 30px;
+}
+
+
+.icon-home {
+    height: 30px;
+}
+
+.icon-mail {
+    width: 25px;
+}
+
+.imagen-logo-footer {
+    width: 50%
+}
+
+.casita-mail {
+    display: flex;
+    gap: 1em;
+}
+
+.imagenes-apps {
+    display: flex;
+    width: 10em ;
+}
+
+.imagenes-contact-us {
+    display: flex;
+    gap: 10px;
+}
+
+.spam-contact {
+    color: black;
+    font-weight: bold;
+}
+
+.div-contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color:  rgb(96, 94, 94);
+}
+
+h3 {
+    color: rgb(0, 0, 0);
+}
+
+.sub-divs-contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-final {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 65px;
+    color: rgb(96, 94, 94)
+}
+
+.tarjetas-credito {
+    width: 350px;
+}
+
+.redes-sociales {
+    width: 100px;
+}
+
+
+
+/* Aqui empiezan las cards */
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 350px;
+    border: 1px solid rgba(128, 128, 128, 0.566);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.card-figure img{
+    display: flex;
+    object-fit: cover;
+    width: 50%;
+    align-items: center;
+    object-fit: contain;
+}
+
+.card-figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+.card-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    object-fit: contain;
+}
+
+.span-price {
+    color: var(--color-primary);
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.span-category {
+    color: gray;
+
+}
+
+.h3-products{
+    font-size: 16px;
+}
+
+#contenedorCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.boton-add {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.boton-favoritos img {
+    width: 20px;
+    padding: 2px;
+    display: flex;
+}
+
+.boton-favoritos {
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.boton-favoritos:hover {
+    background-color: rgba(255, 0, 0, 0.733);
+}
+
+
+
+
+
+
+
+
+/* Aqui enpieza el formulario */
+
+
+
+.div-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+    gap: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 13px;
+}
+
+.formulario-checkout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-input {
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px gray solid;
+}
+
+.div-botones {
+    display: flex;
+    gap: 10px;
+}
+
+.botones {
+    padding: 15px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-buy-now {
+    background-color: rgba(255, 0, 0, 0.641);
+    color: white;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.256);
+}
+
+.a-cancel-formulario {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Aqui empieza el administrador */
+
+#boton-nuevo-producto {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logo-administrador {
+    background-color: rgba(128, 128, 128, 0.107);
+    height: 80px;
+    padding: 18px 65px;
+}
+
+.administrador-titulo {
+    color: var(--color-primary);
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.main-administrador {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+#formulario-administrador {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(128, 128, 128, 0.107);
+    padding: 20px;
+    width: 30%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.div-formulario-administrador {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-admin {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+#boton-crear {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:  rgba(73, 179, 156, 0.699);
+    cursor: pointer;
+    text-align: center;
+}
+
+#tabla-admin {
+    width: 100%;
+    border-spacing: 10px;
+}
+
+#tabla-admin thead {
+    background-color: rgba(128, 128, 128, 0.107);
+    height: 40px;
+}
+
+#tabla-admin tbody {
+    background-color:  rgba(128, 128, 128, 0.107);
+    text-align: center;
+}
+
+.edit, .delete {
+    cursor: pointer;
+    background-color:  rgba(73, 179, 156, 0.699);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none !important; 
+}
+
+
+/* Aqui empiezan las categorias  */
+
+
+.nav-categorias {
+    background-color: rgba(128, 128, 128, 0.107);
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.nav-categorias ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 10px;
+}
+
+.boton-categoria {
+    display: flex;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    gap: 10px;
+}
+
+.imagenes-categorias {
+    width: 20px;
+}
+
+.nav-categorias h2 {
+    font-size: 18px;
+}
+
+.categorias-y-cards {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+/* Aqui empieza la whishlist */
+
+#wishlist-productos {
+    display: flex;
+    gap: 20px;
+}
+
+.titulo-wishlist{
+    background-color: rgba(128, 128, 128, 0.077);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0px 65px;
+
+}
+
+.titulo-wishlist h2{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.swal-carrito {
+    background-color: var(--color-primary);
+}
