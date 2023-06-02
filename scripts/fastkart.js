@@ -37,7 +37,7 @@ const addToCarrito = () => {
 
   //Recorro los botones para obtener el id y escuchar el evento click
   addButtons.forEach((btn) => {
-    const id = btn.getAttribute("id");
+    let id = btn.getAttribute("id");
     btn.addEventListener("click", async () => {
       // Hago una peticion de tipo GET al endpoint products/id  pata obtener el producto
       const prod = await fetch(`${URL_API}/${id}`);
@@ -47,12 +47,21 @@ const addToCarrito = () => {
       let carrito = localStorage.getItem("carrito");
       if (carrito) {
         carrito = JSON.parse(carrito);
-        carrito.push(prodJson);
+        id = Number(id);
+        const encontrarObjeto = carrito.findIndex(objeto => objeto.id === id);
+        if (encontrarObjeto != -1){
+          carrito[encontrarObjeto].quantity += 1;
+          alert("Se sumó 1 a este producto en el carrito.");
+        }
+        else{
+          carrito.push(prodJson);
+          alert("Se agregó el producto al carrito.");
+        }
       } else {
         carrito = [prodJson];
+        alert("Se agregó el producto al carrito.");
       }
       localStorage.setItem("carrito", JSON.stringify(carrito));
-      alert("Se agregó el producto al carrito.");
     });
   });
 };
