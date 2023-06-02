@@ -51,6 +51,7 @@ const addToCarrito = () => {
         const encontrarObjeto = carrito.findIndex(objeto => objeto.id === id);
         if (encontrarObjeto != -1){
           carrito[encontrarObjeto].quantity += 1;
+          carrito[encontrarObjeto].total += carrito[encontrarObjeto].price;
           alert("Se sumó 1 a este producto en el carrito.");
         }
         else{
